@@ -10,12 +10,13 @@ namespace Part_5___Console_Decisions
     class Program
 
     {
+        
 
         static void Main(string[] args)
-        {
+        {          
             int intAge;
             string strInput;
-            Console.WriteLine("State your age");
+            Console.WriteLine("Input your age");
             strInput = Console.ReadLine();
             int.TryParse(strInput, out intAge);
             if (intAge >= 18 ) {
@@ -63,7 +64,25 @@ namespace Part_5___Console_Decisions
          
                     
             }
+
+            Random generator = new Random();
+            Console.WriteLine("Random Number: " + generator.Next(2, 7));
+            Console.WriteLine("Input a number bigger than the random number");
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             Console.ReadLine();
+
         }
     }
 }
