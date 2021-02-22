@@ -18,7 +18,7 @@ namespace Part_5___Console_Decisions
             if (intAge >= 18 ) {
                 Console.WriteLine("adult");
             }
-            else if(intAge <= 5) {
+            else if(intAge <= 5 & intAge > 0) {
                 Console.WriteLine("Toddler");
             }
             else if(intAge <= 10 & intAge > 5) {
@@ -29,6 +29,9 @@ namespace Part_5___Console_Decisions
             }
             else if(intAge < 12 & intAge > 18) {
                 Console.WriteLine("Teen");
+            }
+            else if(intAge <= 0) {
+                Console.WriteLine("Error: Your age can't be below 0");
             }
             Console.ReadLine();
         }
