@@ -66,21 +66,43 @@ namespace Part_5___Console_Decisions
             }
 
             Random generator = new Random();
-            Console.WriteLine("Random Number: " + generator.Next(2, 7));
+            int intOutput;
+            string strIn;
+            int intRan = generator.Next(2, 7);
+            Console.WriteLine("Random Number: " + intRan);
             Console.WriteLine("Input a number bigger than the random number");
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            strIn = Console.ReadLine();
+            bool boolResult = int.TryParse(strIn, out intOutput);
+            int intIn = Convert.ToInt32(strIn);
+            double dblIn = Convert.ToDouble(intIn);
+            if (boolResult == false) 
+            {
+                Console.WriteLine("Error: Please enter a numeric value");
+            }
+            else if (boolResult == true & intIn < intRan)
+            {
+                Console.WriteLine("Error: Please input a number larger than the random number");
+            }
+            if ((intIn % intRan) == 0 )
+            {
+                Console.WriteLine("Divisible");
+            }
+            else if ((intIn % intRan) != 0)
+            {
+                Console.WriteLine("Not Divisible");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
             Console.ReadLine();
 
         }
